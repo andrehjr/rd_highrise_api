@@ -4,6 +4,8 @@ require 'faraday'
 module RdHighriseApi
   # Reflects the People Api endpoint on Highrise
   class People
+    include Api
+
     def initialize(url, api_key)
       @url = url
       @api_key = api_key
@@ -20,26 +22,26 @@ module RdHighriseApi
     end
 
     def create(params)
-      response = faraday.post('/people.xml', as_xml(params))
-      fail ConnectionError if response.status != 200
+      response = faraday.post('/people.xml') do |request|
+        request.headers['Content-Type'] = 'application/xml'
+        request.body = as_xml(params)
+      end
+
+      {
+        status: 201,
+        messages: error_messages_from(response.body)
+      }
     end
 
     private
 
-    def faraday
-      @faraday ||= Faraday.new(url: @url, ssl: { verify: false }) do |builder|
-        builder.basic_auth(@api_key, 'x')
-        builder.adapter Faraday.default_adapter
-      end
-    end
-
     def as_xml(params)
-      builder = Nokogiri::XML::Builder.new do |xml|
-        xml.person {
+      builder = Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
+        xml.person do
           params.each do |key, value|
             xml.send(key.to_s.gsub('_', '-'), value)
           end
-        }
+        end
       end
       builder.to_xml
     end

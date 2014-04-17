@@ -20,7 +20,15 @@ describe RdHighriseApi::People do
 
   it "should generate a person xml from parameters" do
     VCR.use_cassette('create') do
-      api.create(first_name: "Luke", last_name: 'Skywalker', title: 'Test title', background: 'A background')
+      response = api.create(first_name: "Luke", last_name: 'Skywalker', title: 'Test title', background: 'A background')
+      expect(response[:status]).to eql(201)
+    end
+  end
+
+  it "should fail a person does't have the required parameters" do
+    VCR.use_cassette('create_failing') do
+      response = api.create(last_name: 'Skywalker', title: 'Test title', background: 'A background')
+      expect(response[:messages]).to include("First name can't be blank")
     end
   end
 end

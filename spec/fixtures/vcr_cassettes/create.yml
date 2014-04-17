@@ -6,7 +6,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |
-        <?xml version="1.0"?>
+        <?xml version="1.0" encoding="UTF-8"?>
         <person>
           <first-name>Luke</first-name>
           <last-name>Skywalker</last-name>
@@ -16,49 +16,81 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v0.9.0
+      Content-Type:
+      - application/xml
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
       - '*/*'
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 201
+      message: Created
     headers:
       Server:
       - nginx
       Date:
-      - Thu, 17 Apr 2014 04:21:26 GMT
+      - Thu, 17 Apr 2014 13:40:55 GMT
       Content-Type:
-      - text/html; charset=utf-8
+      - application/xml; charset=utf-8
       Content-Length:
-      - '27'
+      - '1005'
       Connection:
       - keep-alive
       Status:
-      - 401 Unauthorized
+      - 201 Created
+      X-Throttle-Count:
+      - '1'
+      Location:
+      - https://andrehjr.highrisehq.com/people/204970862-luke-skywalker
       X-Runtime:
-      - '5'
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Request-Id:
-      - a041bf0416cbdc550c436ce811fdb185
+      - '24'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Throttle-Horizon:
+      - '2014-04-17T13:41:00Z'
       X-Throttle-Max:
       - '500'
       Cache-Control:
       - no-cache
-      Www-Authenticate:
-      - Basic realm="Application"
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Throttle-Horizon:
-      - '2014-04-17T04:21:30Z'
-      X-Throttle-Count:
-      - '1'
+      Set-Cookie:
+      - _sunrise_session=BAh7BzoPc2Vzc2lvbl9pZCIlMDJkMGFkOGQ3YzE3NzNjNDAyY2E5MTc5ODFmZjRlNTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoPbmV3X3BlcnNvblQGOgpAdXNlZHsGOwdG--d8f5a9234b6bed2a0ea01024f80d7633459fd605;
+        path=/; HttpOnly; secure
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Request-Id:
+      - 5438f5e73836a8d3ee8a7fecbd288b81
+      Timing-Allow-Origin:
+      - '*'
     body:
       encoding: UTF-8
       string: |
-        HTTP Basic: Access denied.
+        <?xml version="1.0" encoding="UTF-8"?>
+        <person>
+          <author-id type="integer">1027612</author-id>
+          <background>A background</background>
+          <company-id type="integer" nil="true"></company-id>
+          <created-at type="datetime">2014-04-17T13:40:55Z</created-at>
+          <first-name>Luke</first-name>
+          <group-id type="integer" nil="true"></group-id>
+          <id type="integer">204970862</id>
+          <last-name>Skywalker</last-name>
+          <owner-id type="integer" nil="true"></owner-id>
+          <title>Test title</title>
+          <updated-at type="datetime">2014-04-17T13:40:55Z</updated-at>
+          <visible-to>Everyone</visible-to>
+          <company-name nil="true"></company-name>
+          <linkedin-url nil="true"></linkedin-url>
+          <avatar-url>http://dge9rmgqjs8m1.cloudfront.net/highrise/missing/avatar.gif?r=3</avatar-url>
+        <contact-data>
+          <instant-messengers type="array"/>
+          <twitter-accounts type="array"/>
+          <email-addresses type="array"/>
+          <phone-numbers type="array"/>
+          <addresses type="array"/>
+          <web-addresses type="array"/>
+        </contact-data>
+        </person>
     http_version: 
-  recorded_at: Thu, 17 Apr 2014 04:21:26 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Thu, 17 Apr 2014 13:43:48 GMT
+recorded_with: VCR 2.9.0
