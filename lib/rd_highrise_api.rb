@@ -1,5 +1,6 @@
-require "rd_highrise_api/version"
+require 'rd_highrise_api/version'
+require 'rd_highrise_api/people'
 
 module RdHighriseApi
-  # Your code goes here...
+  class ConnectionError < Exception; end
 end

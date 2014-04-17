@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://028bcc7b7986b72d4c9542dbbb1a85:x@andrehjr.highrisehq.com/people.xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Apr 2014 03:55:03 GMT
+      Content-Type:
+      - application/xml; charset=utf-8
+      Content-Length:
+      - '524'
+      Connection:
+      - Keep-Alive
+      Status:
+      - 200 OK
+      X-Throttle-Count:
+      - '1'
+      Etag:
+      - '"b4afde8d5ed7c3a32e72bbbcc787b217"'
+      X-Runtime:
+      - '20'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Throttle-Horizon:
+      - '2014-04-17T03:55:10Z'
+      X-Throttle-Max:
+      - '500'
+      Cache-Control:
+      - private, max-age=0, must-revalidate
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Request-Id:
+      - ef1d946a10e5dda74afc9c002f12eb98
+      Timing-Allow-Origin:
+      - '*'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <people type="array">
+          <person>
+            <author-id type="integer">1027612</author-id>
+            <background></background>
+            <company-id type="integer">204932209</company-id>
+            <created-at type="datetime">2014-04-16T23:45:03Z</created-at>
+            <first-name>Andr&#233; L.</first-name>
+            <group-id type="integer" nil="true"></group-id>
+            <id type="integer">204932208</id>
+            <last-name>Leal Cardoso Jr</last-name>
+            <owner-id type="integer" nil="true"></owner-id>
+            <title>Ruby Developer</title>
+            <updated-at type="datetime">2014-04-16T23:45:03Z</updated-at>
+            <visible-to>Everyone</visible-to>
+            <company-name>37 Signals</company-name>
+            <linkedin-url nil="true"></linkedin-url>
+            <avatar-url>http://dge9rmgqjs8m1.cloudfront.net/highrise/missing/avatar.gif?r=3</avatar-url>
+        <contact-data>
+          <instant-messengers type="array"/>
+          <twitter-accounts type="array"/>
+          <email-addresses type="array"/>
+          <phone-numbers type="array"/>
+          <addresses type="array"/>
+          <web-addresses type="array"/>
+        </contact-data>
+          </person>
+        </people>
+    http_version: 
+  recorded_at: Thu, 17 Apr 2014 03:55:04 GMT
+recorded_with: VCR 2.8.0
