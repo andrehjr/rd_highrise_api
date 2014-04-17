@@ -17,4 +17,10 @@ describe RdHighriseApi::People do
       expect(person[:first_name]).to eql("André L.")
     end
   end
+
+  it "should generate a person xml from parameters" do
+    VCR.use_cassette('create') do
+      api.create(first_name: "Luke", last_name: 'Skywalker', title: 'Test title', background: 'A background')
+    end
+  end
 end

@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://028bcc7b7986b72d4c9542dbbb1a85:x@andrehjr.highrisehq.com/people.xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <person>
+          <first-name>Luke</first-name>
+          <last-name>Skywalker</last-name>
+          <title>Test title</title>
+          <background>A background</background>
+        </person>
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Apr 2014 04:21:26 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      X-Runtime:
+      - '5'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Request-Id:
+      - a041bf0416cbdc550c436ce811fdb185
+      X-Throttle-Max:
+      - '500'
+      Cache-Control:
+      - no-cache
+      Www-Authenticate:
+      - Basic realm="Application"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Throttle-Horizon:
+      - '2014-04-17T04:21:30Z'
+      X-Throttle-Count:
+      - '1'
+    body:
+      encoding: UTF-8
+      string: |
+        HTTP Basic: Access denied.
+    http_version: 
+  recorded_at: Thu, 17 Apr 2014 04:21:26 GMT
+recorded_with: VCR 2.8.0

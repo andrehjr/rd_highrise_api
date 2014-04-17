@@ -20,7 +20,8 @@ module RdHighriseApi
     end
 
     def create(params)
-      faraday.post('/people.xml')
+      response = faraday.post('/people.xml', as_xml(params))
+      fail ConnectionError if response.status != 200
     end
 
     private
@@ -30,6 +31,17 @@ module RdHighriseApi
         builder.basic_auth(@api_key, 'x')
         builder.adapter Faraday.default_adapter
       end
+    end
+
+    def as_xml(params)
+      builder = Nokogiri::XML::Builder.new do |xml|
+        xml.person {
+          params.each do |key, value|
+            xml.send(key.to_s.gsub('_', '-'), value)
+          end
+        }
+      end
+      builder.to_xml
     end
 
     def as_hash(document)
