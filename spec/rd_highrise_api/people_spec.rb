@@ -12,9 +12,9 @@ describe RdHighriseApi::People do
 
   it "should parse person xml data from highrise correctly" do
     VCR.use_cassette('list') do
-      person = api.all.first
+      person = api.all.last
       expect(person.keys).to include(:first_name, :last_name)
-      expect(person[:first_name]).to eql("André L.")
+      expect(person[:first_name]).to eql("Luke")
     end
   end
 

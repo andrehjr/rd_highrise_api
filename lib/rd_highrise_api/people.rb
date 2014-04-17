@@ -48,11 +48,11 @@ module RdHighriseApi
 
     def as_hash(document)
       {
-        first_name: document.at_xpath('//first-name').content,
-        last_name: document.at_xpath('//last-name').content,
-        title: document.at_xpath('//title').content,
-        background: document.at_xpath('//background').content,
-        linkedin_url: document.at_xpath('//linkedin-url').content
+        first_name: document.at_xpath('first-name').content,
+        last_name: document.at_xpath('last-name').content,
+        title: document.at_xpath('title').content,
+        background: document.at_xpath('background').content,
+        linkedin_url: document.at_xpath('linkedin-url').content
       }
     end
   end

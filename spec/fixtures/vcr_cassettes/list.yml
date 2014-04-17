@@ -21,11 +21,11 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 17 Apr 2014 03:55:03 GMT
+      - Thu, 17 Apr 2014 16:30:56 GMT
       Content-Type:
       - application/xml; charset=utf-8
       Content-Length:
-      - '524'
+      - '626'
       Connection:
       - Keep-Alive
       Status:
@@ -33,13 +33,13 @@ http_interactions:
       X-Throttle-Count:
       - '1'
       Etag:
-      - '"b4afde8d5ed7c3a32e72bbbcc787b217"'
+      - '"9b4544916f7b3bf641a8b9eb980330f8"'
       X-Runtime:
-      - '20'
+      - '30'
       X-Frame-Options:
       - SAMEORIGIN
       X-Throttle-Horizon:
-      - '2014-04-17T03:55:10Z'
+      - '2014-04-17T16:31:00Z'
       X-Throttle-Max:
       - '500'
       Cache-Control:
@@ -47,7 +47,7 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=31536000
       X-Request-Id:
-      - ef1d946a10e5dda74afc9c002f12eb98
+      - 9784ab1cef0388554bd1ac574c6738a2
       Timing-Allow-Origin:
       - '*'
       Vary:
@@ -82,7 +82,32 @@ http_interactions:
           <web-addresses type="array"/>
         </contact-data>
           </person>
+          <person>
+            <author-id type="integer">1027612</author-id>
+            <background>A background</background>
+            <company-id type="integer" nil="true"></company-id>
+            <created-at type="datetime">2014-04-17T13:40:55Z</created-at>
+            <first-name>Luke</first-name>
+            <group-id type="integer" nil="true"></group-id>
+            <id type="integer">204970862</id>
+            <last-name>Skywalker</last-name>
+            <owner-id type="integer" nil="true"></owner-id>
+            <title>Test title</title>
+            <updated-at type="datetime">2014-04-17T13:40:55Z</updated-at>
+            <visible-to>Everyone</visible-to>
+            <company-name nil="true"></company-name>
+            <linkedin-url nil="true"></linkedin-url>
+            <avatar-url>http://dge9rmgqjs8m1.cloudfront.net/highrise/missing/avatar.gif?r=3</avatar-url>
+        <contact-data>
+          <instant-messengers type="array"/>
+          <twitter-accounts type="array"/>
+          <email-addresses type="array"/>
+          <phone-numbers type="array"/>
+          <addresses type="array"/>
+          <web-addresses type="array"/>
+        </contact-data>
+          </person>
         </people>
     http_version: 
-  recorded_at: Thu, 17 Apr 2014 03:55:04 GMT
-recorded_with: VCR 2.8.0
+  recorded_at: Thu, 17 Apr 2014 16:33:49 GMT
+recorded_with: VCR 2.9.0
