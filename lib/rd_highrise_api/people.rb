@@ -51,6 +51,12 @@ module RdHighriseApi
                 xml.location 'Work'
               end
             end
+            xml.web_addresses do
+              xml.web_address do
+                xml.url params.delete(:web_address)
+                xml.location 'Work'
+              end
+            end
           end
 
           params.each do |key, value|
