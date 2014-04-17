@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe RdHighriseApi::People do
   let(:api) { RdHighriseApi::People.new('https://andrehjr.highrisehq.com', '028bcc7b7986b72d4c9542dbbb1a85') }
+  let(:valid_params) { { first_name: "Luke", last_name: 'Skywalker', title: 'Test title', company_name: 'Company!',
+                         phone_number: '1234-1234', email_address: 'email@gmail.com'} }
 
   it "should fetch people from highrise" do
     VCR.use_cassette('list') do
@@ -14,13 +16,13 @@ describe RdHighriseApi::People do
     VCR.use_cassette('list') do
       person = api.all.last
       expect(person.keys).to include(:first_name, :last_name)
-      expect(person[:first_name]).to eql("Luke")
+      expect(person[:first_name]).to eql("Mark")
     end
   end
 
   it "should generate a person xml from parameters" do
     VCR.use_cassette('create') do
-      response = api.create(first_name: "Luke", last_name: 'Skywalker', title: 'Test title', background: 'A background')
+      response = api.create(valid_params)
       expect(response[:status]).to eql(201)
     end
   end

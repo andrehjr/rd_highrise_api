@@ -8,10 +8,24 @@ http_interactions:
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
         <person>
+          <contact_data>
+            <email_addresses>
+              <email_address>
+                <address>email@gmail.com</address>
+                <location>Work</location>
+              </email_address>
+            </email_addresses>
+            <phone_numbers>
+              <phone_number>
+                <number>1234-1234</number>
+                <location>Work</location>
+              </phone_number>
+            </phone_numbers>
+          </contact_data>
           <first-name>Luke</first-name>
           <last-name>Skywalker</last-name>
           <title>Test title</title>
-          <background>A background</background>
+          <company-name>Company!</company-name>
         </person>
     headers:
       User-Agent:
@@ -21,7 +35,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 201
@@ -30,54 +44,56 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 17 Apr 2014 13:40:55 GMT
+      - Thu, 17 Apr 2014 18:51:50 GMT
       Content-Type:
       - application/xml; charset=utf-8
       Content-Length:
-      - '1005'
+      - '602'
       Connection:
-      - keep-alive
+      - Keep-Alive
       Status:
       - 201 Created
       X-Throttle-Count:
       - '1'
       Location:
-      - https://andrehjr.highrisehq.com/people/204970862-luke-skywalker
+      - https://andrehjr.highrisehq.com/people/205028539-luke-skywalker
       X-Runtime:
-      - '24'
+      - '232'
       X-Frame-Options:
       - SAMEORIGIN
       X-Throttle-Horizon:
-      - '2014-04-17T13:41:00Z'
+      - '2014-04-17T18:52:00Z'
       X-Throttle-Max:
       - '500'
       Cache-Control:
       - no-cache
       Set-Cookie:
-      - _sunrise_session=BAh7BzoPc2Vzc2lvbl9pZCIlMDJkMGFkOGQ3YzE3NzNjNDAyY2E5MTc5ODFmZjRlNTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoPbmV3X3BlcnNvblQGOgpAdXNlZHsGOwdG--d8f5a9234b6bed2a0ea01024f80d7633459fd605;
+      - _sunrise_session=BAh7BzoPc2Vzc2lvbl9pZCIlODFkYmY5N2U3Njc3ZTZiYmNiNmVjMTA2ZTUwM2UwZmYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoPbmV3X3BlcnNvblQGOgpAdXNlZHsGOwdG--b9468ee639df61ec6938e1f731ff1ceddb82cd02;
         path=/; HttpOnly; secure
       Strict-Transport-Security:
       - max-age=31536000
       X-Request-Id:
-      - 5438f5e73836a8d3ee8a7fecbd288b81
+      - 3b34e575dae2d2be1c28075238b30ec1
       Timing-Allow-Origin:
-      - '*'
+      - "*"
+      Vary:
+      - Accept-Encoding
     body:
       encoding: UTF-8
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
         <person>
           <author-id type="integer">1027612</author-id>
-          <background>A background</background>
+          <background nil="true"></background>
           <company-id type="integer" nil="true"></company-id>
-          <created-at type="datetime">2014-04-17T13:40:55Z</created-at>
+          <created-at type="datetime">2014-04-17T18:51:50Z</created-at>
           <first-name>Luke</first-name>
           <group-id type="integer" nil="true"></group-id>
-          <id type="integer">204970862</id>
+          <id type="integer">205028539</id>
           <last-name>Skywalker</last-name>
           <owner-id type="integer" nil="true"></owner-id>
           <title>Test title</title>
-          <updated-at type="datetime">2014-04-17T13:40:55Z</updated-at>
+          <updated-at type="datetime">2014-04-17T18:51:50Z</updated-at>
           <visible-to>Everyone</visible-to>
           <company-name nil="true"></company-name>
           <linkedin-url nil="true"></linkedin-url>
@@ -85,12 +101,24 @@ http_interactions:
         <contact-data>
           <instant-messengers type="array"/>
           <twitter-accounts type="array"/>
-          <email-addresses type="array"/>
-          <phone-numbers type="array"/>
+          <email-addresses type="array">
+            <email-address>
+              <address>email@gmail.com</address>
+              <id type="integer">104808353</id>
+              <location>Work</location>
+            </email-address>
+          </email-addresses>
+          <phone-numbers type="array">
+            <phone-number>
+              <id type="integer">165962837</id>
+              <location>Work</location>
+              <number>1234-1234</number>
+            </phone-number>
+          </phone-numbers>
           <addresses type="array"/>
           <web-addresses type="array"/>
         </contact-data>
         </person>
     http_version: 
-  recorded_at: Thu, 17 Apr 2014 13:43:48 GMT
+  recorded_at: Thu, 17 Apr 2014 18:54:44 GMT
 recorded_with: VCR 2.9.0

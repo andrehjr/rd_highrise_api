@@ -12,7 +12,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 200
@@ -21,35 +21,35 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 17 Apr 2014 16:30:56 GMT
+      - Thu, 17 Apr 2014 18:48:17 GMT
       Content-Type:
       - application/xml; charset=utf-8
       Content-Length:
-      - '626'
+      - '851'
       Connection:
       - Keep-Alive
       Status:
       - 200 OK
-      X-Throttle-Count:
-      - '1'
-      Etag:
-      - '"9b4544916f7b3bf641a8b9eb980330f8"'
       X-Runtime:
-      - '30'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Throttle-Horizon:
-      - '2014-04-17T16:31:00Z'
+      - '58'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Request-Id:
+      - 4ccb466730c826402cd8a56bc57245bb
       X-Throttle-Max:
       - '500'
       Cache-Control:
       - private, max-age=0, must-revalidate
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Request-Id:
-      - 9784ab1cef0388554bd1ac574c6738a2
+      X-Frame-Options:
+      - SAMEORIGIN
+      Etag:
+      - '"2d71c8678c8ef4612359e8330b284c3f"'
+      X-Throttle-Horizon:
+      - '2014-04-17T18:48:20Z'
+      X-Throttle-Count:
+      - '1'
       Timing-Allow-Origin:
-      - '*'
+      - "*"
       Vary:
       - Accept-Encoding
     body:
@@ -57,6 +57,31 @@ http_interactions:
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
         <people type="array">
+          <person>
+            <author-id type="integer">1027612</author-id>
+            <background nil="true"></background>
+            <company-id type="integer" nil="true"></company-id>
+            <created-at type="datetime">2014-04-17T16:39:21Z</created-at>
+            <first-name>asdf</first-name>
+            <group-id type="integer" nil="true"></group-id>
+            <id type="integer">205009737</id>
+            <last-name nil="true"></last-name>
+            <owner-id type="integer" nil="true"></owner-id>
+            <title nil="true"></title>
+            <updated-at type="datetime">2014-04-17T16:39:21Z</updated-at>
+            <visible-to>Everyone</visible-to>
+            <company-name nil="true"></company-name>
+            <linkedin-url nil="true"></linkedin-url>
+            <avatar-url>http://dge9rmgqjs8m1.cloudfront.net/highrise/missing/avatar.gif?r=3</avatar-url>
+        <contact-data>
+          <instant-messengers type="array"/>
+          <twitter-accounts type="array"/>
+          <email-addresses type="array"/>
+          <phone-numbers type="array"/>
+          <addresses type="array"/>
+          <web-addresses type="array"/>
+        </contact-data>
+          </person>
           <person>
             <author-id type="integer">1027612</author-id>
             <background></background>
@@ -71,6 +96,31 @@ http_interactions:
             <updated-at type="datetime">2014-04-16T23:45:03Z</updated-at>
             <visible-to>Everyone</visible-to>
             <company-name>37 Signals</company-name>
+            <linkedin-url nil="true"></linkedin-url>
+            <avatar-url>http://dge9rmgqjs8m1.cloudfront.net/highrise/missing/avatar.gif?r=3</avatar-url>
+        <contact-data>
+          <instant-messengers type="array"/>
+          <twitter-accounts type="array"/>
+          <email-addresses type="array"/>
+          <phone-numbers type="array"/>
+          <addresses type="array"/>
+          <web-addresses type="array"/>
+        </contact-data>
+          </person>
+          <person>
+            <author-id type="integer">1027612</author-id>
+            <background nil="true"></background>
+            <company-id type="integer" nil="true"></company-id>
+            <created-at type="datetime">2014-04-17T17:08:22Z</created-at>
+            <first-name>Omg</first-name>
+            <group-id type="integer" nil="true"></group-id>
+            <id type="integer">205020563</id>
+            <last-name nil="true"></last-name>
+            <owner-id type="integer" nil="true"></owner-id>
+            <title nil="true"></title>
+            <updated-at type="datetime">2014-04-17T17:08:22Z</updated-at>
+            <visible-to>Everyone</visible-to>
+            <company-name nil="true"></company-name>
             <linkedin-url nil="true"></linkedin-url>
             <avatar-url>http://dge9rmgqjs8m1.cloudfront.net/highrise/missing/avatar.gif?r=3</avatar-url>
         <contact-data>
@@ -107,7 +157,32 @@ http_interactions:
           <web-addresses type="array"/>
         </contact-data>
           </person>
+          <person>
+            <author-id type="integer">1027612</author-id>
+            <background nil="true"></background>
+            <company-id type="integer" nil="true"></company-id>
+            <created-at type="datetime">2014-04-17T18:04:33Z</created-at>
+            <first-name>Mark</first-name>
+            <group-id type="integer" nil="true"></group-id>
+            <id type="integer">205025189</id>
+            <last-name>Zuckerberg</last-name>
+            <owner-id type="integer" nil="true"></owner-id>
+            <title>Title title</title>
+            <updated-at type="datetime">2014-04-17T18:04:33Z</updated-at>
+            <visible-to>Everyone</visible-to>
+            <company-name nil="true"></company-name>
+            <linkedin-url nil="true"></linkedin-url>
+            <avatar-url>http://dge9rmgqjs8m1.cloudfront.net/highrise/missing/avatar.gif?r=3</avatar-url>
+        <contact-data>
+          <instant-messengers type="array"/>
+          <twitter-accounts type="array"/>
+          <email-addresses type="array"/>
+          <phone-numbers type="array"/>
+          <addresses type="array"/>
+          <web-addresses type="array"/>
+        </contact-data>
+          </person>
         </people>
     http_version: 
-  recorded_at: Thu, 17 Apr 2014 16:33:49 GMT
+  recorded_at: Thu, 17 Apr 2014 18:51:10 GMT
 recorded_with: VCR 2.9.0

@@ -38,6 +38,21 @@ module RdHighriseApi
     def as_xml(params)
       builder = Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
         xml.person do
+          xml.contact_data do
+            xml.email_addresses do
+              xml.email_address do
+                xml.address params.delete(:email_address)
+                xml.location 'Work'
+              end
+            end
+            xml.phone_numbers do
+              xml.phone_number do
+                xml.number params.delete(:phone_number)
+                xml.location 'Work'
+              end
+            end
+          end
+
           params.each do |key, value|
             xml.send(key.to_s.gsub('_', '-'), value)
           end

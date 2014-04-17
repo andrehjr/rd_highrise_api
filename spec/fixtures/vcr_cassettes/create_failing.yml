@@ -8,6 +8,18 @@ http_interactions:
       string: |
         <?xml version="1.0" encoding="UTF-8"?>
         <person>
+          <contact_data>
+            <email_addresses>
+              <email_address>
+                <address/>
+              </email_address>
+            </email_addresses>
+            <phone_numbers>
+              <phone_number>
+                <number/>
+              </phone_number>
+            </phone_numbers>
+          </contact_data>
           <last-name>Skywalker</last-name>
           <title>Test title</title>
           <background>A background</background>
@@ -20,7 +32,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
   response:
     status:
       code: 422
@@ -29,7 +41,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 17 Apr 2014 13:45:28 GMT
+      - Thu, 17 Apr 2014 18:48:26 GMT
       Content-Type:
       - application/xml; charset=utf-8
       Content-Length:
@@ -38,20 +50,20 @@ http_interactions:
       - keep-alive
       Status:
       - 422 Unprocessable Entity
-      Strict-Transport-Security:
-      - max-age=31536000
-      X-Request-Id:
-      - 22c9cda930f8706a4bfae4fb2fa542b4
+      X-Throttle-Count:
+      - '2'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Throttle-Horizon:
+      - '2014-04-17T18:48:30Z'
       X-Throttle-Max:
       - '500'
       Cache-Control:
       - no-cache
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Throttle-Horizon:
-      - '2014-04-17T13:45:30Z'
-      X-Throttle-Count:
-      - '1'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Request-Id:
+      - fabe8c5918f93dac3ca6e40b849ced10
     body:
       encoding: UTF-8
       string: |
@@ -60,5 +72,5 @@ http_interactions:
           <error>First name can't be blank</error>
         </errors>
     http_version: 
-  recorded_at: Thu, 17 Apr 2014 13:48:20 GMT
+  recorded_at: Thu, 17 Apr 2014 18:51:19 GMT
 recorded_with: VCR 2.9.0
